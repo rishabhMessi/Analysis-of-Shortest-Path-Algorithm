@@ -52,7 +52,7 @@ void floyd_warshall(ve<ve<pr>> &adj)
 }
 void bellman_ford(ve<ve<pr>> &adj)
 {
-	struct edge
+	struct edge	// A data structure to use all the edges at a time
 	{
 		ll u,v,w;
 	};
@@ -70,7 +70,7 @@ void bellman_ford(ve<ve<pr>> &adj)
 	}
 	ve<ll> dist(n+1,INT_MAX);
 	dist[root] = 0;
-	rep(i,n-1)
+	rep(i,n-1)	// Since we know that in most n-1 times, we can always reach to the last vertex, if graph is connected obviously.
 	{
 		rep(j,vv.sz)
 		{
