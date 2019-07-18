@@ -36,7 +36,7 @@ void floyd_warshall(ve<ve<pr>> &adj)
 		{
 			range(j,1,n)	// loop for j as ending node
 			{
-				dist[i][j] = min(dist[i][j],dist[i][k],dist[k][j]);
+				dist[i][j] = min(dist[i][j],dist[i][k]+dist[k][j]);
 			}
 		}
 	}
